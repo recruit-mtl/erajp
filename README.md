@@ -1,10 +1,22 @@
+[![pypi](https://img.shields.io/pypi/dm/erajp.svg)](https://pypi.python.org/pypi/erajp)
+[![pypi](https://img.shields.io/pypi/v/erajp.svg)](https://pypi.python.org/pypi/erajp)
+[![GitHub license](https://img.shields.io/github/license/recruit-mtl/erajp.svg)](https://github.com/recruit-mtl/erajp)
+[![travis](https://img.shields.io/travis/recruit-mtl/erajp.svg)](https://travis-ci.org/recruit-mtl/erajp)
+[![coveralls](https://img.shields.io/coveralls/recruit-mtl/erajp.svg)](https://coveralls.io/github/recruit-mtl/erajp)
+
 # erajp: Convert datetime to Japanese era
 
 ## Requirements
 - Python 2.7+, 3.4+
 
 ## Installation
-Comming soon!
+
+Install erajp via PyPI:
+```
+pip install erajp
+```
+
+
 
 ## How to use
 
