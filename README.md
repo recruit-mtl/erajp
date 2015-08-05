@@ -7,7 +7,7 @@
 # erajp: Convert datetime to Japanese era
 
 ## Requirements
-- Python 2.7+, 3.4+
+- Python 2.7+
 
 ## Installation
 
