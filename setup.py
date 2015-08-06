@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='erajp',
-    version='0.0.2',
+    version='0.0.3',
     description='Convert datetime to Japanese era',
     author='kasajei',
     author_email='kasajei@me.com',
