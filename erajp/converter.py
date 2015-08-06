@@ -18,10 +18,10 @@ def strjpftime(time=datetime.datetime.today(), format=u"%o%E.%m.%d"):
     """
     Convert to Japanese era
     :param time:
-    :param format: strtftime format
+    :param format: strftime format
         New available here
-            - %o : alpabet era
-            - %O : Chinese charactor era
+            - %o : alphabet era
+            - %O : Chinese character era
             - %E : era year
     :return:
     """

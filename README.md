@@ -18,7 +18,7 @@ pip install erajp
 
 ## How to use
 
-```ptyhon
+```python
 >>> strjpftime()
  'H27.08.05' # now
 >>> strjpftime(datetime.datetime(1989, 1, 8)) 
