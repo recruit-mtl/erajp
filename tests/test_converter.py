@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
-from unittest import TestCase
 import datetime
+from unittest import TestCase
+
 from nose.tools import eq_, raises
+
 from erajp.converter import strjpftime, NotExceptedTimeException
 
 
@@ -40,12 +42,3 @@ class TestConverter(TestCase):
         heisei_time = datetime.datetime(2015, 8, 5)
         eq_(strjpftime(heisei_time), u"H27.08.05")
         eq_(strjpftime(heisei_time, u"%O%E年"), u"平成27年")
-
-
-
-
-
-
-
-
-
