@@ -16,8 +16,6 @@ Install erajp via PyPI:
 pip install erajp
 ```
 
-
-
 ## How to use
 
 ```
@@ -28,6 +26,11 @@ pip install erajp
 >>> strjpftime(datetime.datetime(1989, 1, 8), u"%O%E年")
  '平成元年'
 ```
+
+ New available date format
+ - %o : alpabet era
+ - %O : Chinese charactor era
+ - %E : era year
 
 ## License
 MIT License
