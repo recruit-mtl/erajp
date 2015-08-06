@@ -7,7 +7,7 @@ install:
   - pip install -e . nose python-coveralls
 
 script:
-  - nosetests --with-coverage
+  - nosetests  --with-coverage --cover-package=erajp
 
 after_success:
   - coveralls
