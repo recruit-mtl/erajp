@@ -9,7 +9,9 @@ setup(
     author_email='kasajei@me.com',
     url='https://github.com/recruit-mtl/erajp',
     packages=['erajp'],
-    install_requires=[],
+    install_requires=[
+        'six>=1.9.0'
+    ],
     extras_require={
         "test": ['nose', 'coverage']
     }

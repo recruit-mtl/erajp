@@ -2,6 +2,8 @@
 from __future__ import unicode_literals
 import datetime
 
+from six import PY2, text_type
+
 
 ERA_JP = (
     ("M", "明治"),
@@ -44,8 +46,11 @@ def strjpftime(time=datetime.datetime.today(), format="%o%E.%m.%d"):
     if era_year == 1 and format.find("%O") > -1:
         era_year = "元"
     else:
-        era_year = unicode(era_year)
+        era_year = text_type(era_year)
 
     format = format.replace("%o", era).replace("%O", era_ch).replace("%E", era_year)
-    strttime = time.strftime(format.encode("utf-8")).decode("utf-8")
+    if PY2:
+        strttime = time.strftime(format.encode("utf-8")).decode("utf-8")
+    else:
+        strttime = time.strftime(format)
     return strttime
