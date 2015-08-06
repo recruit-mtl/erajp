@@ -27,7 +27,8 @@ pip install erajp
  '平成元年'
 ```
 
- ### New available date format
+New available date format
+ 
  - %o : alpabet era
  - %O : Chinese charactor era
  - %E : era year
