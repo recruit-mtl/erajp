@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 import datetime
+
+from six import PY2, text_type
 
 
 ERA_JP = (
-    (u"M", u"明治"),
-    (u"T", u"大正"),
-    (u"S", u"昭和"),
-    (u"H", u"平成"),
+    ("M", "明治"),
+    ("T", "大正"),
+    ("S", "昭和"),
+    ("H", "平成"),
 )
 
 
@@ -14,14 +17,14 @@ class NotExceptedTimeException(Exception):
     pass
 
 
-def strjpftime(time=datetime.datetime.today(), format=u"%o%E.%m.%d"):
+def strjpftime(time=datetime.datetime.today(), format="%o%E.%m.%d"):
     """
     Convert to Japanese era
     :param time:
-    :param format: strtftime format
+    :param format: strftime format
         New available here
-            - %o : alpabet era
-            - %O : Chinese charactor era
+            - %o : alphabet era
+            - %O : Chinese character era
             - %E : era year
     :return:
     """
@@ -40,11 +43,14 @@ def strjpftime(time=datetime.datetime.today(), format=u"%o%E.%m.%d"):
     else:
         era_year = time.year - 1988
         era, era_ch = ERA_JP[3]
-    if era_year == 1 and format.find(u"%O") > -1:
-        era_year = u"元"
+    if era_year == 1 and format.find("%O") > -1:
+        era_year = "元"
     else:
-        era_year = str(era_year)
+        era_year = text_type(era_year)
 
-    format = format.replace(u"%o", era).replace(u"%O", era_ch).replace(u"%E", era_year)
-    strttime = time.strftime(format.encode("utf-8")).decode("utf-8")
+    format = format.replace("%o", era).replace("%O", era_ch).replace("%E", era_year)
+    if PY2:
+        strttime = time.strftime(format.encode("utf-8")).decode("utf-8")
+    else:
+        strttime = time.strftime(format)
     return strttime

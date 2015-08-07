@@ -8,6 +8,7 @@
 
 ## Requirements
 - Python 2.7+
+- Python 3.2+
 
 ## Installation
 
@@ -18,7 +19,7 @@ pip install erajp
 
 ## How to use
 
-```ptyhon
+```python
 >>> strjpftime()
  'H27.08.05' # now
 >>> strjpftime(datetime.datetime(1989, 1, 8)) 
@@ -27,17 +28,14 @@ pip install erajp
  '平成元年'
 ```
 
-
 ### New available date format
- 
+
  - %o : alpabet era
  - %O : Chinese charactor era
  - %E : era year
- 
- 
 
 ## Main Project Website.
- 
+
  [https://github.com/recruit-mtl/erajp](https://github.com/recruit-mtl/erajp)
 
 ## License
