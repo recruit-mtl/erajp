@@ -3,6 +3,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+pip-selfcheck.json
 
 # C extensions
 *.so
@@ -60,3 +61,8 @@ target/
 *.swp
 *.swo
 .idea
+
+# virtualenv
+bin
+lib
+include
