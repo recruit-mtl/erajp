@@ -13,7 +13,7 @@ ERA_JP = (
 )
 
 
-class NotExceptedTimeException(Exception):
+class NotExpectedTimeException(Exception):
     pass
 
 
@@ -30,7 +30,7 @@ def strjpftime(time=datetime.datetime.today(), format="%o%E.%m.%d"):
     """
     era_year, era, era_ch = None, None, None
     if time < datetime.datetime(1868, 9, 8):
-        raise NotExceptedTimeException("time is expected later than 1868.09.08.")
+        raise NotExpectedTimeException("time is expected later than 1868.09.08.")
     elif time < datetime.datetime(1912, 7, 30):
         era_year = time.year - 1867
         era, era_ch = ERA_JP[0]

@@ -5,16 +5,16 @@ from unittest import TestCase
 
 from nose.tools import eq_, raises
 
-from erajp.converter import strjpftime, NotExceptedTimeException
+from erajp.converter import strjpftime, NotExpectedTimeException
 
 
 class TestConverter(TestCase):
-    @raises(NotExceptedTimeException)
-    def test_not_excepted_time(self):
+    @raises(NotExpectedTimeException)
+    def test_not_Expected_time(self):
         exception_time = datetime.datetime(1868, 9, 7)
         strjpftime(exception_time)
 
-    def test_excepted_time(self):
+    def test_expected_time(self):
         last_meiji_time = datetime.datetime(1912, 7, 29)
         eq_(strjpftime(last_meiji_time), "M45.07.29")
         eq_(strjpftime(last_meiji_time, "%O%E年"), "明治45年")
